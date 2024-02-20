@@ -6,8 +6,8 @@ public class PlayerMovement : MonoBehaviour
 {
     public static PlayerMovement playerController;
     public float speed;
-    [HideInInspector]  public float defSpd;
-    
+    [HideInInspector] public float defSpd;
+
     float x;
     float y;
     Rigidbody2D rb;
@@ -24,6 +24,8 @@ public class PlayerMovement : MonoBehaviour
 
     public bool isGameOver = false;
     public GameObject RespawnPoint;
+
+    public bool vertical = true;
 
     void Awake()
     {
@@ -56,7 +58,7 @@ public class PlayerMovement : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.U) && nextFire <= 0)
         {
-            GameObject projectile = (GameObject)Instantiate(Projectile);
+            GameObject projectile = Instantiate(Projectile);
             fire.Play();
 
             projectile.transform.position = projectilePosition.transform.position;
@@ -79,6 +81,11 @@ public class PlayerMovement : MonoBehaviour
         {
             SelfDestruct();
         }
+
+
+
+
+        Debug.Log(vertical);
     }
 
     void Move(Vector2 direction)
@@ -145,19 +152,44 @@ public class PlayerMovement : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.W))
         {
             y = 10.0f;
+
+            if(vertical == false)
+            {
+                vertical = true;
+                Rotate();
+            }
         }
         if (Input.GetKeyDown(KeyCode.A))
         {
             x = -10.0f;
+
+            if(vertical == true)
+            {
+                vertical = false;
+                Rotate();
+            }
         }
         if (Input.GetKeyDown(KeyCode.S))
         {
             y = -10.0f;
+            if (vertical == false)
+            {
+                vertical = true;
+                Rotate();
+            }
+
         }
         if (Input.GetKeyDown(KeyCode.D))
         {
             x = 10.0f;
+            if (vertical == true)
+            {
+                vertical = false;
+                Rotate();
+            }
+
         }
+
         if (Input.GetKeyUp(KeyCode.W) || Input.GetKeyUp(KeyCode.S))
         {
             y = 0;
@@ -168,6 +200,12 @@ public class PlayerMovement : MonoBehaviour
             x = 0;
         }
     }
+
+    void Rotate()
+    {
+        gameObject.transform.Rotate(0, 0, 90);
+    }
+
 
 
 }
