@@ -7,8 +7,8 @@ public class EnemySpawnerScript : MonoBehaviour
     public GameObject enemyShipPrefab;
     public static EnemySpawnerScript enemySpawner;
 
-    public float xPosMax = 2.75f;
-    public float xPosMin = -2.75f;
+    public float xPosMax = 9.75f;
+    public float xPosMin = -9.75f;
     public float yPosMax = 7f;
     public float yPosMin = 5f;
 
@@ -43,7 +43,7 @@ public class EnemySpawnerScript : MonoBehaviour
     {
         spawnInterval -= Time.deltaTime;
 
-        if (spawnInterval <= 0 && enemyCount < 5)
+        if (spawnInterval <= 0 && enemyCount < 50)
         {
             float spawnXPosition = Random.Range(xPosMin, xPosMax);
             float spawnYPostion = Random.Range(yPosMin, yPosMax);
