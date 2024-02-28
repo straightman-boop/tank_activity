@@ -10,6 +10,7 @@ TagManager:
   - Meteors
   - PickUp
   - Shield
+  - HomeBase
   layers:
   - Default
   - TransparentFX
