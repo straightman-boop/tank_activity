@@ -17,6 +17,7 @@ public class GameController : MonoBehaviour
     public AudioSource bgFX;
 
     int shipsDestroyed = 0;
+    public TextMeshProUGUI shipsDestroyedUI;
 
     bool level1Over = false;
 
@@ -54,6 +55,8 @@ public class GameController : MonoBehaviour
     float shieldCool2;
 
     bool isShield2 = false;
+
+   
 
     private void Awake()
     {
@@ -96,12 +99,14 @@ public class GameController : MonoBehaviour
             GameOver();
         }
 
-        if (shipsDestroyed == 5 && level1Over == false)
-        {
-            //StartCoroutine(DelayStartLevel());
-            //Records number of ships destroyed; Switches to gameover!
-            level1Over = true;
-        }
+        shipsDestroyedUI.text = "Ships Destroyed: " + shipsDestroyed.ToString();
+
+        //if (shipsDestroyed == 5 && level1Over == false)
+        //{
+        //    //StartCoroutine(DelayStartLevel());
+        //    //Records number of ships destroyed; Switches to gameover!
+        //    //level1Over = true;
+        //}
 
         //Debug.Log(bossHealth);
 
