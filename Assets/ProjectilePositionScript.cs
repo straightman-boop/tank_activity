@@ -15,6 +15,12 @@ public class ProjectilePositionScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if(Player != null)
         transform.position = Player.transform.position;
+
+        else if(Player == null)
+        {
+            Destroy(gameObject);
+        }
     }
 }

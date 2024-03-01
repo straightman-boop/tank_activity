@@ -89,7 +89,7 @@ public class GameController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Debug.Log(shipsNum);
+        //Debug.Log(shipsNum);
 
         if (isGamOver == false && shipsNum == 0)
         {
@@ -98,7 +98,8 @@ public class GameController : MonoBehaviour
 
         if (shipsDestroyed == 5 && level1Over == false)
         {
-            StartCoroutine(DelayStartLevel());
+            //StartCoroutine(DelayStartLevel());
+            //Records number of ships destroyed; Switches to gameover!
             level1Over = true;
         }
 

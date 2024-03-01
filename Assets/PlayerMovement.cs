@@ -85,7 +85,7 @@ public class PlayerMovement : MonoBehaviour
 
 
 
-        Debug.Log(vertical);
+        //Debug.Log(vertical);
     }
 
     void Move(Vector2 direction)
