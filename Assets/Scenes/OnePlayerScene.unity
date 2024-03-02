@@ -8469,6 +8469,7 @@ MonoBehaviour:
   levelNumber: {fileID: 720340072}
   loseFX: {fileID: 1123745805}
   bgFX: {fileID: 1123745804}
+  shipsDestroyedUI: {fileID: 613342557}
   bossMusic: {fileID: 1123745806}
   bossHealth: 200
   playerDmg: 5
@@ -9241,9 +9242,10 @@ GameObject:
   - component: {fileID: 1193687561}
   - component: {fileID: 1193687560}
   - component: {fileID: 1193687559}
+  - component: {fileID: 1193687564}
   m_Layer: 3
   m_Name: Base
-  m_TagString: HomeBase
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9256,14 +9258,14 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1193687558}
-  m_BodyType: 1
+  m_BodyType: 0
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 0
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -9369,6 +9371,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
+--- !u!114 &1193687564
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1193687558}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 219981eebfb6e9843af8d36a674325be, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Explode: {fileID: 2663921679546799778, guid: 46c9d2b73f6364d418809f74ff100d4a, type: 3}
 --- !u!1 &1201092595
 GameObject:
   m_ObjectHideFlags: 0
@@ -11039,6 +11054,14 @@ PrefabInstance:
     - target: {fileID: 4579485672058041002, guid: 5e535e9a7294a994b94746651459f874, type: 3}
       propertyPath: m_Layer
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4579485672058041002, guid: 5e535e9a7294a994b94746651459f874, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4579485672058041003, guid: 5e535e9a7294a994b94746651459f874, type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 4579485672058041001, guid: 5e535e9a7294a994b94746651459f874, type: 3}

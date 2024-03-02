@@ -56,7 +56,9 @@ public class GameController : MonoBehaviour
 
     bool isShield2 = false;
 
-   
+    int baseDestroyed = 0;
+
+
 
     private void Awake()
     {
@@ -108,7 +110,7 @@ public class GameController : MonoBehaviour
         //    //level1Over = true;
         //}
 
-        //Debug.Log(bossHealth);
+        Debug.Log(baseDestroyed);
 
         if (bossHealth <= 0)
         {
@@ -249,6 +251,11 @@ public class GameController : MonoBehaviour
             speedOn = true;
             speedDuration = speedCooldown;
         }
+    }
+
+    public void BaseDestroyed()
+    {
+        baseDestroyed++;
     }
 
 }
