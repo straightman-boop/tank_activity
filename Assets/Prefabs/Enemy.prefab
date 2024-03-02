@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 8351401045266311052}
   - component: {fileID: 8351401045266311055}
   - component: {fileID: 8351401045266311054}
-  - component: {fileID: 8351401045266311049}
+  - component: {fileID: 5268581304699732933}
   - component: {fileID: 8351401045266311048}
   - component: {fileID: 8351401045266311053}
   m_Layer: 10
@@ -30,7 +30,7 @@ Transform:
   m_GameObject: {fileID: 8351401045266311051}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.4119812, y: 0.4119812, z: 0.4119812}
+  m_LocalScale: {x: 0.22626832, y: 0.22626832, z: 0.22626832}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 8351401045287598680}
@@ -78,7 +78,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: 21300000, guid: 46b59cddf4881fd47939280f4f888742, type: 3}
+  m_Sprite: {fileID: -107329066, guid: c859fef6fb1aad24abb41b33fa537036, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -110,8 +110,8 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!58 &8351401045266311049
-CircleCollider2D:
+--- !u!60 &5268581304699732933
+PolygonCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -124,8 +124,23 @@ CircleCollider2D:
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
-  serializedVersion: 2
-  m_Radius: 0.62
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 2.375, y: 2.875}
+    newSize: {x: 1.24, y: 1.23}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: -1.1875, y: 1.4375}
+      - {x: -1.1875, y: -1.3125}
+      - {x: -0.875, y: -1.4375}
+      - {x: 1.0625, y: -1.4375}
+      - {x: 1.1875, y: -1.125}
+      - {x: 1.1875, y: 1.4375}
 --- !u!114 &8351401045266311048
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -140,11 +155,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spriteRenderer: {fileID: 8351401045266311055}
   spriteArray:
-  - {fileID: 21300000, guid: 46b59cddf4881fd47939280f4f888742, type: 3}
-  - {fileID: 21300000, guid: e900cc171c93c5542b0036ad20b7eb69, type: 3}
-  - {fileID: 21300000, guid: 85679d6dd5c6eb54297f3514f33eafbf, type: 3}
-  - {fileID: 21300000, guid: fb3862e6baeeace48bb251d1d2fc3d89, type: 3}
-  - {fileID: 21300000, guid: 8920f166c51c05343944c33cd127abb4, type: 3}
+  - {fileID: -107329066, guid: c859fef6fb1aad24abb41b33fa537036, type: 3}
+  - {fileID: 565567972, guid: c859fef6fb1aad24abb41b33fa537036, type: 3}
 --- !u!114 &8351401045266311053
 MonoBehaviour:
   m_ObjectHideFlags: 0

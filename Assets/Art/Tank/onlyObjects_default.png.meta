@@ -272,7 +272,7 @@ TextureImporter:
         width: 62
         height: 76
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -280,6 +280,48 @@ TextureImporter:
       bones: []
       spriteID: d9d315a919c311e40a414e80bcbdddb9
       internalID: 763777923
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: onlyObjects_default_8
+      rect:
+        serializedVersion: 2
+        x: 258
+        y: 165
+        width: 38
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9862118ee8534de458f3165c4aac3342
+      internalID: -107329066
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: onlyObjects_default_9
+      rect:
+        serializedVersion: 2
+        x: 173
+        y: 289
+        width: 42
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3ed1eb8cf9bcaf548ae3e75f436e4798
+      internalID: 565567972
       vertices: []
       indices: 
       edges: []
@@ -303,6 +345,8 @@ TextureImporter:
       onlyObjects_default_5: -652559978
       onlyObjects_default_6: -1942713231
       onlyObjects_default_7: 763777923
+      onlyObjects_default_8: -107329066
+      onlyObjects_default_9: 565567972
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
