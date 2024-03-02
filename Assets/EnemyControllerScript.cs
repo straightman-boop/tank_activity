@@ -38,7 +38,7 @@ public class EnemyControllerScript : MonoBehaviour
 
         if (transform.position.y < min.y)
         {
-            GameController.gameController.ShipDestroyed();
+            //GameController.gameController.ShipDestroyed();
             Destroy(gameObject);
         }
     }
