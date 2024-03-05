@@ -28,12 +28,12 @@ public class MenuScreenController : MonoBehaviour
 
     public void SinglePlayer()
     {
-        SceneManager.LoadScene("OnePlayerScene");
+        SceneManager.LoadScene(1);
     }
 
     public void TwoPlayer()
     {
-        SceneManager.LoadScene("TwoPlayerScene");
+        SceneManager.LoadScene(2);
     }
 
     public void Play()
