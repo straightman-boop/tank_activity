@@ -96,7 +96,7 @@ public class GameController : MonoBehaviour
     {
         //Debug.Log(shipsNum);
 
-        if (isGamOver == false && shipsNum == 0)
+        if (isGamOver == false && shipsNum == 0 || baseDestroyed >= 3)
         {
             GameOver();
         }
@@ -112,7 +112,7 @@ public class GameController : MonoBehaviour
 
         Debug.Log(baseDestroyed);
 
-        if (bossHealth <= 0)
+        if (shipsDestroyed >= 20) //WINSCENARIO
         {
             GameWin();
         }
@@ -209,32 +209,32 @@ public class GameController : MonoBehaviour
         shipsDestroyed++;
     }
 
-    void StartLevel2()
-    {
-        Debug.Log("LEVEL 2 HAS BEGUN!");
-        phase2.SetActive(true);
+    //void StartLevel2()
+    //{
+    //    Debug.Log("LEVEL 2 HAS BEGUN!");
+    //    phase2.SetActive(true);
 
-        EnemySpawnerScript.enemySpawner.enabled = false;
-        healthBar.SetActive(true);
-        bgFX.Stop();
-        bossMusic.Play();
-    }
+    //    EnemySpawnerScript.enemySpawner.enabled = false;
+    //    healthBar.SetActive(true);
+    //    bgFX.Stop();
+    //    bossMusic.Play();
+    //}
 
-    IEnumerator DelayStartLevel()
-    {
-        yield return new WaitForSeconds(1);
-        levelNumber.text = " ";
-        yield return new WaitForSeconds(5);
-        levelNumber.text = "Level 2";
-        yield return new WaitForSeconds(1);
-        StartLevel2();
-    }
+    //IEnumerator DelayStartLevel()
+    //{
+    //    yield return new WaitForSeconds(1);
+    //    levelNumber.text = " ";
+    //    yield return new WaitForSeconds(5);
+    //    levelNumber.text = "Level 2";
+    //    yield return new WaitForSeconds(1);
+    //    StartLevel2();
+    //}
 
-    public void DecrementBossHealth()
-    {
-        bossHealth -= playerDmg;
-        bossSlider.value = bossHealth;
-    }
+    //public void DecrementBossHealth()
+    //{
+    //    bossHealth -= playerDmg;
+    //    bossSlider.value = bossHealth;
+    //}
 
     public void IncreaseSpeed(string player)
     {
