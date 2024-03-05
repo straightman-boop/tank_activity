@@ -293,7 +293,7 @@ TextureImporter:
         width: 38
         height: 46
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -314,7 +314,7 @@ TextureImporter:
         width: 42
         height: 46
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -322,6 +322,27 @@ TextureImporter:
       bones: []
       spriteID: 3ed1eb8cf9bcaf548ae3e75f436e4798
       internalID: 565567972
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: onlyObjects_default_10
+      rect:
+        serializedVersion: 2
+        x: 216
+        y: 101
+        width: 42
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d4c615ffd9c33a7468b0f770e8e1f120
+      internalID: 1070416628
       vertices: []
       indices: 
       edges: []
@@ -339,6 +360,7 @@ TextureImporter:
     nameFileIdTable:
       onlyObjects_default_0: 170698309
       onlyObjects_default_1: -93621530
+      onlyObjects_default_10: 1070416628
       onlyObjects_default_2: 50375508
       onlyObjects_default_3: -1127749915
       onlyObjects_default_4: -1051197453
